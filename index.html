@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <form id="transaction-form">
+        <input type="text" id="description" placeholder="Transaction description">
+        <input type="number" id="amount" placeholder="Amount">
+        <button type="submit">Add Transaction</button>
+    </form>
+    <div>
+        <button onclick="filterTransactions('all')">All</button>
+        <button onclick="filterTransactions('income')">Income</button>
+        <button onclick="filterTransactions('expense')">Expenses</button>
+    </div>
+    <ul id="transaction-list"></ul>
+    <h2>Total Balance: <span id="balance">0</span></h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
