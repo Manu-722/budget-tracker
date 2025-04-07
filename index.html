@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Expense Tracker</h1>
-    <form id="transaction-form">
-        <input type="text" id="description" placeholder="Transaction description">
-        <input type="number" id="amount" placeholder="Amount">
-        <button type="submit">Add Transaction</button>
-    </form>
-    <div>
-        <button onclick="filterTransactions('all')">All</button>
-        <button onclick="filterTransactions('income')">Income</button>
-        <button onclick="filterTransactions('expense')">Expenses</button>
+    <h1>Budget Tracker</h1>
+    <div id="form">
+        <input type="text" id="description" placeholder="Enter description">
+        <input type="number" id="amount" placeholder="Enter amount">
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <button id="addTransaction">Add Transaction</button>
     </div>
-    <ul id="transaction-list"></ul>
-    <h2>Total Balance: <span id="balance">0</span></h2>
-
+    <div id="summary">
+        <h3>Total Income: <span id="totalIncome">ksh0</span></h3>
+        <h3>Total Expenses: <span id="totalExpenses">ksh0</span></h3>
+        <h3>Balance: <span id="balance">ksh0</span></h3>
+    </div>
+    <ul id="transactionsList"></ul>
     <script src="script.js"></script>
 </body>
 </html>
